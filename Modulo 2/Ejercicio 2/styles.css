@@ -1,0 +1,35 @@
+html {
+    position: relative; /* Necesario para que position: absolute funcione correctamente */
+    min-height: 100%; /* Para que el body tenga una altura mínima para el footer */
+}
+
+body {
+    padding-bottom: 40px; /* Añade un padding para que el contenido no quede debajo del footer */
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    align-self: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; /* Posiciona el footer al final del body */
+    width: 100%;
+    height: 40px; /* Define una altura para el footer */
+}
+
+header {
+    padding-top: 20px;
+}
+
+h1 {
+    background-color: grey;
+    color: whitesmoke;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+}
