@@ -11,29 +11,68 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="p-3">
                 <a href="./index.html" rel="noopener noreferrer">Atras</a>
             </nav>
-            <h1>Formulario de contacto</h1>
+            <h1 style="padding-block: 20px;" class="text-center">Formulario de contacto</h1>
         </header>
         <main>
             <img src="./images/CAP.jpg" alt="Imagen logo empresa sidedurgica CAP">
+
+            <div class="row">
+                <div class="col-6">
+                    <form onsubmit="submitMessage(event)" class="m-4 p-4 border" action="#" method="post">
+                        <label for="nombre">Nombre completo</label><br>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"><br>
+                        <br>
+
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Ingrese su email"><br>
+                        <br>
+
+                        <label for="mensaje">Mensaje</label><br>
+                        <textarea name="mensaje" id="mensaje" rows="10" cols="80"></textarea><br>
+                        <br>
+
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <table class="border m-4 p-4">
+                        <thead class="border bg-secondary">
+                            <th class=p-4>
+                                Susursal
+                            </th>
+                            <th class=p-4>
+                                Dirección
+                            </th>
+                            <th class=p-4>
+                                Número Telefónico
+                            </th>
+                        </thead>
+                        <tbody class="">
+                            <tr class="border" >
+                                <td class=p-4>Concepción</td>
+                                <td class=p-4>Calle Barros Arana, 123</td>
+                                <td class=p-4> +41 2 222 222</td>
+                            </tr>
+                            <tr class="border" >
+                                <td class=p-4>Santiago</td>
+                                <td class=p-4>Las Condes, 123</td>
+                                <td class=p-4> +41 2 333 333</td>
+                            </tr>
+                            <tr class="border" >
+                                <td class=p-4>Temuco</td>
+                                <td class=p-4>Calle Araucaria, 123</td>
+                                <td class=p-4> +41 2 444 444</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             
-            <form onsubmit="submitMessage(event)" class="m-4 p-4 border">
-                <label for="nombre">Nombre completo</label><br>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"><br>
-                <br>
-
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="Ingrese su email"><br>
-                <br>
-
-                <label for="mensaje">Mensaje</label><br>
-                <textarea name="mensaje" id="mensaje"></textarea><br>
-                <br>
-
-                <button type="submit">Enviar Mensaje</button>
-            </form>
+                
+            
         </main>
         <footer>
             <h3><u>Información de contacto</u></h3>
