@@ -1,0 +1,46 @@
+body {
+    margin: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(190, 233, 199);
+}
+
+#imagenmiau {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vw;
+}
+
+/* #imagenmiau img {
+    Flex: 1;
+} */
+
+h2 {
+    margin: 10vw;
+    background-color: rgb(92, 189, 92);
+    color: rgb(228, 22, 142);
+    padding: 5vw;
+    font-size: 5vw;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+nav {
+    background-color: rgb(228, 22, 142);
+    padding: 15px;
+}
+
+main {
+    background-color: rgb(207, 241, 217);
+    border: 1px solid rgb(226, 137, 211);
+    padding: 3vw;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(211, 94, 152);
+    color: greenyellow;
+}
