@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Dispositivos moviles */
+
+/* JORGE */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    box-sizing: border-box;
+}
+
+main *{
+    flex: 1;
+}
+
+header {
+    background-image: url(../img/denji-de-chainsaw-man-13578.jpg);
+    background-size: cover;       /* ajusta la imagen para cubrir el contenedor */
+    background-position: center;  /* centra la imagen */
+    background-repeat: no-repeat; /* evita repetición */
+    width: 100%;
+    height: 50vh;                 /* altura relativa a la ventana; cambia a 100vh para pantalla completa */
+    min-height: 200px;            /* evita que quede demasiado pequeño en móviles */
+    font-size: 10vh;
+    align-items: center;
+    
+}
+
+header h1{
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px #2b2929;
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 0.5rem 1rem; 
+}
+
+#jorge {
+    margin-top: 2vw;
+    background-color: lightblue;
+    padding-block: 3vw;
+}
+
+#jorge h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    color: rgb(31, 31, 36);
+    margin-inline: 3vw;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+#anime-cards-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vw;
+}
+
+.anime-card{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 2vw;
+    padding-inline: 5vw;
+    align-items: stretch; /* hijos ocupan ancho disponible */
+}
+
+.anime-card > * {
+    flex: 1 1 auto;
+}
+
+.anime-img {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.anime-img img{
+    display: block;
+    width: 100%;
+    height: auto; /* importante para conservar proporción */
+    object-fit: cover; /* opcional para recorte elegante */
+    border-radius: 6px;
+}
+
+.anime-info{
+    background-color: antiquewhite;
+    width: 100%;
+    box-shadow: none;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+}
+
+.anime-info h3{
+    padding-inline: 2vw;
+}
+
+.anime-info p{
+    padding-inline: 1vw;
+}
+
+/* DANIEL */
+
+#DanielM {
+  font-family: Arial, sans-serif;
+  background-color: yellow;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+#titulo {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.Naruto {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* PAULA */
+#paula {
+  background-color: rgb(188, 227, 129);
+  color: rgb(196, 32, 59);
+}
+
+#titulopaula {
+  margin: 20px;
+  padding: 30px;
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: xx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.recomendaciones-paula {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5em;
+  padding: 1%;
+
+}
+
+.recomendaciones-paula {
+  flex: 1;
+}
+
+.texto-paula {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  width: 15em;
+  font-size: clamp(12px, 3vw, 16px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgpaula {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  border-radius: 50%;
+  justify-content: center;
+  align-self: flex-end;
+  padding-bottom: 1%;
+}
+
+.imgpaula {
+  flex: 1
+}
+
+/* ELVIS */
+
+#elvis {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+#titulo-elvis {    
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#descripcion-elvis {
+    text-align: center;
+    max-width: 800px;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#imagen-contenedor-elvis img {
+    width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Tablets */
+@media (min-width: 640px) {
+
+    /* JORGE */
+
+    #anime-cards-container{
+        row-gap: 5vw;
+    }
+
+    .anime-card{
+        flex-direction: row;
+        column-gap: 3vw;
+        padding-inline: 5vw;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        align-items: stretch;
+    }
+
+    .anime-img{
+        flex: 0 0 30%; /* contenedor de imagen fijo */
+        max-width: 30%;
+    }
+
+    .anime-info{
+        flex: 1 1 70%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* DANIEL */
+
+    #DanielM {
+        background-color:orange;
+    }
+
+    .Naruto {
+        max-width: 600px;
+    }
+
+    #titulo {
+        font-size: 2rem;
+    }
+
+    /* PAULA */
+
+    #titulopaula {
+        font-size: clamp (16px, 4vw, 20px)
+    }
+
+    .recomendaciones-paula {
+        gap: 7em;
+        padding: 2%;
+        justify-content: space-evenly;
+    }
+
+    .texto-paula {
+        font-size: clamp(15px, 4vw, 20px);
+        width: 10em;
+    }
+
+    .imgpaula {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* ELVIS */
+
+    #imagen-contenedor-elvis img {
+        max-width: 70%;
+    }
+}
+
+/* Computadores */
+@media (min-width: 1024px) {
+
+    /* JORGE */
+
+    #anime-cards-container{
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+    }
+
+    .anime-card{
+        flex-direction: column; /* cada card en columna si quieres mostrar imagen encima de info */
+        flex: 1 1 wrap; /* 3 columnas aproximadas */
+        padding-inline: 2vw;
+        align-items: stretch;
+        height: auto; /* evitar 50% que depende del padre */
+        justify-content: space-between;
+    }
+
+    .anime-img{
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .anime-img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .anime-info{
+        height: 30%;
+        max-height: 30%;
+        width: 100%;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* DANIEL */
+
+    #DanielM {
+        background-color: red;
+    }
+
+    .Naruto {
+        max-width: 800px;
+    }
+
+    #titulo {
+        font-size: 2.5rem;
+    }
+
+    /* PAULA */
+
+    #titulopaula {
+        font-size: clamp (16px, 4vw, 20px)
+    }
+
+    .recomendaciones-paula {
+        gap: 10em;
+    }
+
+    .texto-paula {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    .imgpaula {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* ELVIS */
+
+    #imagen-contenedor-elvis img {
+        max-width: 50%;
+        flex: 1;
+    }
+    
+    #imagen-contenedor{
+        display:flex;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+}
