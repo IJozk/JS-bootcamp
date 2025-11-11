@@ -22,3 +22,13 @@ function submitMessage(event) {
     window.location.replace("form_enviado.html")
     form.reset();
 }
+
+function toggleNav() {
+    // alert("Función toggleNav ejecutada");
+    const nav = document.querySelector('.botones-nav');
+    if (nav) {
+        nav.classList.toggle('open-nav');
+    } else {
+        console.error("No se encontró el elemento de navegación");
+    }
+}
