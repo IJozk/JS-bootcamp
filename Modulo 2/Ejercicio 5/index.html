@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de mercado - Ropa formal para gatos</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Ropa Formal para Gatos</h1>
+            <p class="subtitle">Vestuario formal para que los felinos domésticos se puedan desarrollar en sus actividades laborales y
+                eventos de gala.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <img id="gato1" src="./assets/img/Imagen de WhatsApp 2025-11-12 a las 00.23.55_a6f8ebc8.jpg" alt="Gato con ropa formal">
+
+            <div class="form-wrapper">
+                <h2 class="form-title">Encuesta de Satisfacción</h2>
+
+                <form id="form1" action="#" method="post">
+                    <div class="form-section">
+                        <h3>Información Personal</h3>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre del encuestado:</label>
+                            <input id="nombre-form" type="text" name="nombre" placeholder="Escribe tu nombre completo..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email-form" placeholder="ejemplo@dominio.cl" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cant-gatos">Cantidad de gatos:</label>
+                            <select name="cant-gatos" id="cant-gatos">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 o más</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Nivel de Satisfacción</h3>
+
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" name="radio" id="opcion1" value="muy satisfecho">
+                                <label for="opcion1">Muy satisfecho</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" name="radio" id="opcion2" value="satisfecho">
+                                <label for="opcion2">Satisfecho</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" name="radio" id="opcion3" value="neutral">
+                                <label for="opcion3">Ni fu ni fa</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" name="radio" id="opcion4" value="insatisfecho">
+                                <label for="opcion4">Insatisfecho</label>
+                            </div>
+
+                            <div class="radio-option">
+                                <input type="radio" name="radio" id="opcion5" value="muy insatisfecho">
+                                <label for="opcion5">Muy Insatisfecho</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text-area1">Comentarios:</label>
+                            <textarea name="txt-area" id="text-area1" rows="5" placeholder="Cuéntanos tu experiencia...">Los mejores trajes para gato !!</textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Encuesta</button>
+                    </div>
+                </form>
+            </div>
+
+            <img id="gato2" src="./assets/img/Imagen de WhatsApp 2025-11-12 a las 00.23.56_6f399afb.jpg" alt="Gato elegante con traje">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ropa Formal para Gatos - Elegancia Felina</p>
+    </footer>
+</body>
+
+</html>
