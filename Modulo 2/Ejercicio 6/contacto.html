@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- **********  METADATA ******************* -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <!-- **********  LINKS  ******************* -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <header class="">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="#">WEB</a>
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-light" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tiempo
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Pasado</a></li>
+                                    <li><a class="dropdown-item" href="#">Presente</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Futuro</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Hurgar"
+                                aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Hurgar</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="pt-5" style="background-color: rgb(16, 16, 16);">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 text-light pt-5"><h1> Formulario de contacto</h1></div>
+                <div class="col-4 fade-img"><img src="./assets/img/IMG_0113.PNG" alt="Imagen logo empresa sidedurgica CAP" style="height: 200px;"></div>
+            </div>
+            <div class="row px-5 py-5">
+                <div class="col-2"></div>
+                <div class="col-8 border border-white py-5">
+                    <div class="px-5 text-light ">
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="Juan" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="Perez" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustomUsername" class="form-label">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom04" class="form-label">Region</label>
+                        <select class="form-select" id="validationCustom04" required>
+                          <option selected disabled value="">Elige una region...</option>
+                          <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Comentarios</label>
+                        <textarea class="form-control" id="validationCustom05" required> </textarea>
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Acuerdo de uso
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit" onclick="submitMessage(event)">Enviar Comentario</button>
+                      </div>
+                    </form>
+                </div></div>
+                
+
+                <div
+                    class="table-responsive pt-5"
+                >
+                    <table
+                        class="table table-primary"
+                    >
+                        <thead>
+                                <th scope="col">Sucursal</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Número Telefónico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td scope="row">Concepción</td>
+                                <td >Calle Barros Arana, 123</td>
+                                <td > +41 2 222 222</td>
+                            </tr>
+                            <tr class="">
+                                <td scope="row">Santiago</td>
+                                <td >Las Condes, 123</td>
+                                <td > +41 2 333 333</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+                
+            
+        </main>
+        <footer class="footer bg-dark text-white text-center py-3 position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+                        <p>
+                        <a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img class="dechill-img" src="./assets/img/dechill.png" alt="Decoración">
+        </footer>
+    </body>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

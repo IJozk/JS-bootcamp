@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.efecto-moverFondo {
+  animation: moverFondo 100s linear infinite;
+}
+
+@keyframes respiracion {
+  0%   { transform: translateY(0) scale(1); }
+  40%  { transform: translateY(-2px) scale(1.04); }
+  60%  { transform: translateY(0)  scale(1.02); }
+  100% { transform: translateY(0)  scale(1); }
+}
+
+/* aplica la animación de "respirar" a la imagen superpuesta */
+.dechill-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 3000px;
+    width: auto;
+    z-index: 10;
+
+    transform-origin: center right;           /* punto desde donde escala */
+    will-change: transform;                   /* ayuda al navegador a optimizar */
+    animation: respiracion 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dechill-img {
+    animation: none;
+  }
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.995); }
+  10%  { opacity: 1; transform: translateY(0) scale(1); }
+  60%  { opacity: 1; transform: translateY(0) scale(1); }
+  90%  { opacity: 0; transform: translateY(4px) scale(0.998); }
+  100% { opacity: 0; transform: translateY(6px) scale(0.995); }
+}
+
+/* imagen que aparece y desaparece */
+.fade-img {
+  bottom: 0;
+  right: 180px;           /* ajusta la separación desde la derecha */
+  max-height: 150px;
+  width: auto;
+  z-index: 15;
+  opacity: 0;
+  transform-origin: center right;
+  will-change: opacity, transform;
+  animation: fadeInOut 10s ease-in-out infinite;
+  margin-bottom: 2vw;
+}
+
+/* si quieres mostrar/ocultar con JS agregando/quitarndo la clase 'paused' */
+.fade-img.paused {
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+/* respetar preferencia del usuario por reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .fade-img { animation: none; opacity: 1; }
+}
+
+.titulo {
+    font-family: "Stack Sans Notch";
+    font-weight: 700;
+}
+
+.carousel-custom {
+    height: 50vw;
+    margin: 0 auto;
+}
+
+.carousel-custom .carousel-item img {
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
+}
+
+.footer {
+    position: relative;
+}
+
+.dechill-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 3000px;
+    width: auto;
+    z-index: 10;
+}
+
+@media ( max-width: 1000px ) {
+  .dechill-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 150px;
+    width: auto;
+    z-index: 10;
+}
+}
