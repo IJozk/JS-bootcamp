@@ -67,34 +67,26 @@
                     <form class="row g-3 needs-validation" novalidate>
                       <div class="col-md-6">
                         <label for="validationCustom01" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Juan" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Juan" required>
+                        <div class="text-danger" id="msj_val_1"></div>
                       </div>
                       <div class="col-md-6">
                         <label for="validationCustom02" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="validationCustom02" value="Perez" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Perez" required>
+                        <div class="text-danger" id="msj_val_2"></div>
                       </div>
                       <div class="col-md-6">
                         <label for="validationCustomUsername" class="form-label">Username</label>
                         <div class="input-group">
                           <span class="input-group-text" id="inputGroupPrepend">@</span>
                           <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                          <div class="invalid-feedback">
-                            Please choose a username.
-                          </div>
                         </div>
+                        <div class="text-danger" id="msj_val_3"></div>
                       </div>
                       <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">Ciudad</label>
                         <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                          Please provide a valid city.
-                        </div>
+                        <div class="text-danger" id="msj_val_4"></div>
                       </div>
                       <div class="col-md-6">
                         <label for="validationCustom04" class="form-label">Region</label>
@@ -102,16 +94,12 @@
                           <option selected disabled value="">Elige una region...</option>
                           <option>...</option>
                         </select>
-                        <div class="invalid-feedback">
-                          Please select a valid state.
-                        </div>
+                        <div class="text-danger" id="msj_val_5"></div>
                       </div>
                       <div class="col-md-6">
                         <label for="validationCustom05" class="form-label">Comentarios</label>
                         <textarea class="form-control" id="validationCustom05" required> </textarea>
-                        <div class="invalid-feedback">
-                          Please provide a valid zip.
-                        </div>
+                        <div class="text-danger" id="msj_val_6"></div>
                       </div>
                       <div class="col-12">
                         <div class="form-check">
@@ -119,14 +107,13 @@
                           <label class="form-check-label" for="invalidCheck">
                             Acuerdo de uso
                           </label>
-                          <div class="invalid-feedback">
-                            You must agree before submitting.
-                          </div>
+                          <div class="text-danger" id="msj_val_7"></div>
                         </div>
                       </div>
                       <div class="col-12">
-                        <button class="btn btn-primary" type="submit" onclick="submitMessage(event)">Enviar Comentario</button>
+                        <button class="btn btn-primary" id="botonSubmit" type="submit">Enviar Comentario</button>
                       </div>
+                      <div class="text-danger" id="msj_val_8"></div>
                     </form>
                 </div></div>
                 
@@ -157,9 +144,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-            
-                
+            </div>                
             
         </main>
         <footer class="footer bg-dark text-white text-center py-3 position-relative">
