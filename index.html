@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Bootcamp - Indice de Proyectos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .main-header h1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-title {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        .project-card .card-body {
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .project-card .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+
+        .project-link:hover {
+            color: white;
+        }
+
+        .badge-custom {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .no-projects {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+        .project-card:nth-child(7) { animation-delay: 0.7s; }
+        .project-card:nth-child(8) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <!-- Header Principal -->
+        <div class="main-header">
+            <h1 class="display-4">JavaScript Bootcamp</h1>
+            <p class="lead text-muted">Índice de Proyectos y Ejercicios</p>
+        </div>
+
+        <!-- Módulo 1 -->
+        <div class="module-section">
+            <h2 class="module-title">Módulo 1</h2>
+            <div class="no-projects">
+                No hay proyectos disponibles aún
+            </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="module-section">
+            <h2 class="module-title">Módulo 2</h2>
+            <div class="row g-4">
+                <!-- Ejercicio 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 1/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 1</h5>
+                                <span class="badge-custom">HTML & CSS</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 2/miweb1.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 2</h5>
+                                <span class="badge-custom">HTML & CSS</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 3/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 3</h5>
+                                <span class="badge-custom">JavaScript</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 4/index-img-rwd.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 4</h5>
+                                <span class="badge-custom">JavaScript</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 5/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 5</h5>
+                                <span class="badge-custom">JavaScript</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 6 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 6/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 6</h5>
+                                <span class="badge-custom">JavaScript</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 7 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 7/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 7</h5>
+                                <span class="badge-custom">JavaScript</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ejercicio 8 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card project-card">
+                        <a href="./Modulo 2/Ejercicio 8/index.html" class="project-link">
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 8</h5>
+                                <span class="badge-custom">Portfolio CV</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-white mt-4">
+            <p>&copy; 2025 Jorge Riffo - JavaScript Bootcamp</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
