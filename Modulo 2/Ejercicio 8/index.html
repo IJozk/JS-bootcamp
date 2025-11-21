@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="bg-dark efecto-moverFondo" style="background-image: url(./assets/img/fondo.PNG);">
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">WEB</a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown" >
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tiempo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="movSections">
+                                <li><a class="dropdown-item" href="#fila2">Pasado</a></li>
+                                <li><a class="dropdown-item" href="#presente">Presente</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#futuro">Futuro</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Hurgar"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Hurgar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+        <div class="header-container container gy-2" id="presente">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="card bg-dark text-white border-white">
+                        <img src="./assets/img/IMG_0112.PNG" class="img-fluid  card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h1 class="titulo display-1 text-light py-4 text-dark" style="text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.581);">Jorge Riffo</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cv-container container bg-light bg-gradient" id="futuro">
+            <div class="row py-5 px-5">
+                <div class="col-12 col-lg-6 mt-3 px-3">
+                    <h2 class="pb-5" style="text-shadow: 2px 2px 10px black;"> Datos personales</h2>
+                    <div class="row">
+                        <div class="table-responsive align-content-center">
+                            <table class="table table-light w-75">
+                                <tbody>
+                                    <tr class="">
+                                        <td scope="row">Ciudad de Origen:</td>
+                                        <td scope="row">Concepción</td>
+                                    <tr>
+                                        <td>Edad:</td>
+                                        <td>32 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email:</td>
+                                        <td>jorgeriffo.u@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GITHUB:</td>
+                                        <td><a href="http://www.github.com/IJozk" target="_blank">github</a></td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>LINKeDiN:</td>
+                                        <td><a href="https://www.linkedin.com/in/jorge-riffo-uribe-2a2a8a251"
+                                                target="_blank">Linkedin</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-lg-6 mt-3 bg-light mb-5 px-3">
+                    <h2 class="pb-3">Experiencia Laboral</h2>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne"  >
+                                <button class="accordion-button bg-dark" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    <div style="color: azure;">CORPOREO</div>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body">
+                                    <strong>Febrero 2012</strong><br>
+                                    Vestido de Android Promociones LEK SPA.
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        <div style="color: azure;">VENDEDOR</div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        <strong> Enero 2015 - Julio 2019 </strong><br>
+                                        <code> Botilleria Los Reyes </code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <div style="color: azure;">OPERADOR DE MAQUINARIA</div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <strong>Septiembre 2022 - Julio 2023</strong> <br>
+                                        <code> CAP, Talcahuano</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                    <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <div style="color: azure;">RONDÍN</div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFour">
+                                    <div class="accordion-body">
+                                        <strong>Septiembre 2023 - Marzo 2024</strong><br>
+                                        <code> Villa Nonken, Concepción.</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                                    <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <div style="color: azure;">ELECTRICISTA</div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFive">
+                                    <div class="accordion-body">
+                                        <strong>Enero 2013 - Marzo 2015</strong> 
+                                        <code>  </code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="background-color: rgb(39, 40, 44); color: rgb(201, 211, 220);">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                                    <button class="accordion-button collapsed bg-dark" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                        <div style="color: azure;">PROGRAMADOR FULL STACK DE TODO</div>
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingSix">
+                                    <div class="accordion-body">
+                                        <strong>Diciembre 2024 -  Alcualmente</strong> <br>
+                                        <code> Sparkling Data SPA.</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            CORPOREO
+                        </li>
+                        <li class="list-group-item">
+                            VENDEDOR
+                        </li>
+                        <li class="list-group-item">
+                            OPERADOR DE MAQUINARIA
+                        </li>
+                        <li class="list-group-item">
+                            RONDIN
+                        </li>
+                        <li class="list-group-item">
+                            ELECTRICISTA
+                        </li>
+                        <li class="list-group-item">
+                            PROGRAMADOR FULL STACK DE TODO
+                        </li>
+                    </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row px-3" id="fila2">
+                <div class="row  pb-5">
+                    <div class="col-12 col-lg-6">
+                        <h2 class=" text-center">Historial Academico</h2>
+                        <ul class="py-4 px-5 list-unstyled">
+                            <li class="pb-3">
+                                <div class="row">
+                                    <div class="col-4 ">
+                                        <img src="./assets/img/bebe.png" alt="" srcset="" style=" max-height: 5em;">
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <h5> Kinder - 1° Básico</h5>
+                                        Colegio Juan Gregorio Las Heras, Concepción
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pb-3">
+                                <div class="row">
+                                    <div class="col-8 ">
+                                        <h5> 2° Básico - 8° Básico</h5>
+                                        Colegio Villa Acero E-504, Hualpén
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <img src="./assets/img/troglodita.png" alt="" srcset="" style=" max-height: 5em;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pb-3">
+                                <div class="row">
+                                    <div class="col-4 ">
+                                        <img src="./assets/img/emo.png" alt="" srcset="" style=" max-height: 5em;">
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <h5> 1° Medio - 4° Medio</h5>
+                                        Colegio Salesianos San Jose Concepción, Concepción
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pb-3">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h5> Ingeniería Civil en Automatización</h5>
+                                        Universidad del Bío - Bío, Concepción
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <img src="./assets/img/cansado.png" alt="" srcset="" style=" max-height: 5em;">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pb-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="./assets/img/gato-inf.avif" alt="" srcset="" style=" max-height: 5em;">
+                                    </div>
+                                    <div class="col-8 text-end">
+                                        <h5> Ingeniería en Informática</h5>
+                                        Duoc Uc Sede San Andrés, Concepción
+                                    </div>
+                                    
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="pb-3 text-center">Tecnologías</h2>
+                        <div class="tec-container bg-dark border border-primary border-3 text-center">
+                            <h4 class="d-block py-4 text-light w-100">Python - JavaScript - Java - C</h4>
+                            <h4 class="d-block text-light w-100">NodeJS - VueJS - Angular - Django</h4>
+                            <h4 class="d-block py-4 text-light w-100">GCP - AWS - GITHUB - Docker</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5" >
+                    <div id="carouselExampleControls" class="carousel slide carousel-custom" data-bs-ride="carousel">
+                        <div class="carousel-inner" >
+                            <div class="carousel-item active">
+                                <img src="./assets/img/IMG_0071.JPG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/IMG_0113.PNG" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./assets/img/pingu.gif" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="footer bg-dark text-white text-center py-3 mt-5 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+                    <p>
+                    <a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img class="dechill-img" src="./assets/img/dechill.png" alt="Decoración">
+    </footer>
+</body>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>
