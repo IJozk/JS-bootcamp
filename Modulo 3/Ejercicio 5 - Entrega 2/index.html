@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista tareas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="m-5">Lista de tareas</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3" id="contenido_lista">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">N°</th>
+                            <th scope="col">Tarea</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Vencimiento</th>
+                            <th scope="col"> Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenidoTabla">
+                        
+                        
+                    </tbody>
+                    <tr>
+                                        <td></td>
+                                        <td><input type="text" placeholder="descripción" id="descripcionTarea"></td>
+                                        <td> Pendiente </td>
+                                        <td><input type="date" name="date" id="dateVencimiento"></td>
+                                        <td><button class='btn btn-primary' onclick="agregarTarea()">Añadir Tarea</button></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>    
+    <script src="./assets/js/ejercicio_5.js"></script>
+</body>
+</html>
