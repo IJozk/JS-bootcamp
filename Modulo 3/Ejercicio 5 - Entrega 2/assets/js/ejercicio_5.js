@@ -8,17 +8,20 @@ do{
     contadorTareas++;
     let descTarea = prompt("Escriba una nueva tarea")
     let fecha = prompt("Ingrese vencimiento de tarea: formato(01/01/2025)")
-    let nuevatarea = {
-        numero: contadorTareas,
-        descripcion: descTarea,
-        estado: false,
-        fecha_venc: new Date(fecha)
+    if(!descTarea == "" || !fecha == ""){
+        let nuevatarea = {
+            numero: contadorTareas,
+            descripcion: descTarea,
+            estado: false,
+            fecha_venc: new Date(fecha)
+        }
+        listaDeTareas.push(nuevatarea)
     }
-    listaDeTareas.push(nuevatarea)
+    
     
 }while(confirm("¿Deseas añadir otra tarea?"))
 
-if (listaDeTareas<=0){
+if (listaDeTareas.length <= 0){
     mostrarTareas += "No hay tareas pendientes"
 }else{
     for(i in listaDeTareas){
@@ -36,8 +39,8 @@ cargarTareas()
 
 function cargarTareas(){
     cont_tabla.innerHTML = ''
-    if (listaDeTareas<=0){
-        cont_tabla.innerHTML += "No hay tareas pendientes"
+    if (listaDeTareas.length <= 0){
+        cont_tabla.innerHTML += "<tr> No hay tareas pendientes </tr>"
     }else{
         for(i in listaDeTareas){
             cont_tabla.innerHTML += `<tr>
@@ -56,7 +59,7 @@ function agregarTarea(){
     let descTarea = document.getElementById("descripcionTarea").value
     let fechaVenc = document.getElementById("dateVencimiento").value
     let nuevatarea = {
-        numero: listaDeTareas.length++,
+        numero: ++listaDeTareas.length,
         descripcion: descTarea,
         estado: false,
         fecha_venc: new Date(fechaVenc)
