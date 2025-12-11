@@ -1,6 +1,6 @@
 // Requisitos minimos
-const nombre = prompt("Ingrese su nombre:");
-const apellido = prompt("Ingrese su apellido:");
+const nombre = prompt("Ingrese su nombre:").replace(" ", '');
+const apellido = prompt("Ingrese su apellido:").replace(" ", '');
 
 console.log(`${nombre.charAt(0).toLowerCase()}`);
 console.log(`${apellido.slice(0, 3).toLowerCase()}`);
@@ -21,7 +21,7 @@ console.log(`Su nombre de usuario generado es: ${nombreUsuario}`);
 const dominio = "@miempresa.com";
 
 const email = nombreUsuario.concat(dominio);
-console.log(`Su email generado es: ${email}`);  
+console.log(`Su email generado es: ${email}`);
 
 const userDataDiv = document.getElementById("datosUsuario");
 
@@ -31,4 +31,3 @@ userDataDiv.innerHTML += `<h2>Su email generado es: ${email}</h2>`;
 
 // Mostrar en alerta
 alert(`Su nombre de usuario generado es: ${nombreUsuario}\nSu email generado es: ${email}`);
-
