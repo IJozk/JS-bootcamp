@@ -1,0 +1,5 @@
+[
+    {"titulo":"El Quijote","autor":"Miguel de Cervantes","estado":"Disponible"},
+    {"titulo":"Cien Años de Soledad","autor":"Gabriel García Márquez","estado":"Prestado"},
+    {"titulo":"1984","autor":"George Orwell","estado":"Disponible"}
+]
