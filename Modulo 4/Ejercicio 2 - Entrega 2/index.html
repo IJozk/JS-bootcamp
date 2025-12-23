@@ -29,27 +29,27 @@
                         >Run</a
                     >
                     <pre><code class="">
-// Objeto que representa a un usuario
-var usuario = {
-nombre: 'Ana',
-edad: 24,
-ciudad: 'Barcelona'
-};
+    // Objeto que representa a un usuario
+    var usuario = {
+    nombre: 'Ana',
+    edad: 24,
+    ciudad: 'Barcelona'
+    };
 
-// Función tradicional para crear el mensaje de presentación
-function crearMensajePresentacion(user) {
-var nombre = user.nombre;
-var edad = user.edad;
-var ciudad = user.ciudad;
+    // Función tradicional para crear el mensaje de presentación
+    function crearMensajePresentacion(user) {
+    var nombre = user.nombre;
+    var edad = user.edad;
+    var ciudad = user.ciudad;
 
-var mensaje = 'Hola, mi nombre es ' + nombre + ', tengo ' + edad + ' años y vivo en la ciudad de ' + ciudad + '.';
+    var mensaje = 'Hola, mi nombre es ' + nombre + ', tengo ' + edad + ' años y vivo en la ciudad de ' + ciudad + '.';
 
-return mensaje;
-}
+    return mensaje;
+    }
 
-// Se llama a la función y se muestra el resultado en consola
-var mensajeDeBienvenida = crearMensajePresentacion(usuario);
-console.log(mensajeDeBienvenida);
+    // Se llama a la función y se muestra el resultado en consola
+    var mensajeDeBienvenida = crearMensajePresentacion(usuario);
+    console.log(mensajeDeBienvenida);
                     </code></pre>
                 </div>
                 <div class="col-6">
@@ -63,27 +63,21 @@ console.log(mensajeDeBienvenida);
                         >Run</a
                     >
                     <pre><code class="">
-<span></span>// Objeto que representa a un usuario
-const usuario = {
-    nombre: 'Ana',
-    edad: 24,
-    ciudad: 'Barcelona'
-};
+    // Objeto que representa a un usuario
+    const usuario = {
+        nombre: 'Ana',
+        edad: 24,
+        ciudad: 'Barcelona'
+    };
 
-// Función tradicional para crear el mensaje de presentación
-const crearMensajePresentacion = (user) => {
-    let nombre = user.nombre;
-    let edad = user.edad;
-    let ciudad = user.ciudad;
+    // Función tradicional para crear el mensaje de presentación
+    const crearMensajePresentacion = (user) => {
+        const { nombre, edad, ciudad } = user;
+        return `Hola, mi nombre es ${nombre}, tengo ${edad} años y vivo en la ciudad de ${ciudad}.`;
+    }
 
-    let mensaje = `Hola, mi nombre es ${nombre}, tengo ${edad} años y vivo en la ciudad de ${ciudad}.`;
-    
-    return mensaje;
-}
-
-// Se llama a la función y se muestra el resultado en consola
-const mensajeDeBienvenida = crearMensajePresentacion(usuario);
-console.log(mensajeDeBienvenida);
+    // Se llama a la función y se muestra el resultado en consola
+    console.log(crearMensajePresentacion(usuario));
                     </code></pre>
                 </div>
             </div>
