@@ -111,7 +111,11 @@ const newObtenerUsuario = (id) => {
     setTimeout(() => {
       // Simula un posible error
       if (!id) {
-        reject("Error: ID de usuario no proporcionado.", null);
+        let error = {
+          status: 400,
+          message: "Error: ID de usuario no proporcionado."
+        }
+        reject(error);
       } else{
         const usuario = {
           id: id,
@@ -131,7 +135,7 @@ const newObtenerPosts = (userId) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!userId) {
-        reject("Error: ID de usuario no proporcionado para buscar posts.",);
+        reject("Error: ID de usuario no proporcionado para buscar posts.");
       } else {
         console.log(`Buscando posts del usuario con ID: ${userId}...`);
         const posts = [
@@ -180,12 +184,31 @@ function pruebasPromesas(){
   })
 }
 
+async function pruebaAsync() {
+    try {
+        console.log("Iniciando obtención de datos...");
+        const user = await newObtenerUsuario(1);
+        console.log(`El nombre de la organización es: ${user.id}`);
 
+        const posts = await newObtenerPosts(user.id);
+
+        const comentarios = await newObtenerComentarios(posts[0].id);
+
+        comentarios.forEach( comentario => {
+          console.log("ID comentario: "+comentario.id + "\n" + comentario.texto)
+        })
+
+    } catch (error) {
+        console.error("Error codigo " + error.status + ". \nFalló la operación asíncrona: "+ error.message);
+    } finally {
+        console.log("Proceso async/await finalizado.");
+    }
+}
 
 const pruebas = () => {
   setTimeout(() => {
       console.log("---------------------------------")
-      console.log("Prueba de funciones con callbacks")
+      console.log("Prueba de funciones con Callbacks")
       console.log("---------------------------------")
       pruebasCallbacks()
     }, 3000)
@@ -195,6 +218,13 @@ const pruebas = () => {
       console.log("---------------------------------")
       pruebasPromesas()
     }, 6000)
+  setTimeout(() => {
+      console.log("---------------------------------")
+      console.log("Prueba de funciones con Async/Await ")
+      console.log("---------------------------------")
+      pruebasPromesas()
+    }, 9000)
+  
 }
 
 pruebas()
