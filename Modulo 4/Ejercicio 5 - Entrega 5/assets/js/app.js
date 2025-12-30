@@ -13,9 +13,9 @@ const cargar_fetch_btn = document.getElementById("cargar-fetch")
 const div_resultado = document.getElementById("resultado")
 
 // url base para realizar consulta a la api
-const url_base = "https://jsonplaceholder.typicode.com" 
+const url_base = "https://aves.ninjas.cl/api" 
 
-let url_users = `${url_base}/users`
+let url_birds = `${url_base}/birds`
 
 // Añade un Event Listener: Escucha el evento click en el botón.
 
@@ -29,7 +29,7 @@ cargar_xhr_btn.addEventListener("click", () =>{
   // Tipo de respuesta esperada
   // xhr.responseType = 'json';
 
-  // 
+  // Manejamos la respuesta recibida
   xhr.onload = () => {
     if (xhr.status === 200) {
       let respuesta = JSON.parse(xhr.response)
@@ -39,6 +39,7 @@ cargar_xhr_btn.addEventListener("click", () =>{
     }
   };
 
+  // Se ejecuta cuando ocurre un error de conexion
   xhr.onerror = () => {
     console.error('Error de red, la petición no se envió');
   };
@@ -47,39 +48,95 @@ cargar_xhr_btn.addEventListener("click", () =>{
 })
 
 
-// Lógica de la Solicitud XHR: Dentro del listener del evento:
+// Parte 2: Realizando Requests con Fetch API (El método moderno)
+// Selecciona los Elementos: Obtén el botón cargar-fetch.
 
-// Crea una nueva instancia de XMLHttpRequest: const xhr = new XMLHttpRequest();.
+// Añade un Event Listener: Escucha el evento click en este botón.
 
-// Configura la solicitud con el método open(): xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);.
+// Lógica de la Solicitud Fetch: Dentro del listener del evento:
 
-// Define qué hacer cuando la data se reciba exitosamente con el evento onload. Dentro de esta función:
+// Llama a fetch('https://jsonplaceholder.typicode.com/users').
 
-// Verifica que el estado de la respuesta sea 200 (this.status === 200).
+// Encadena un primer .then() para manejar la respuesta. Verifica si la respuesta es correcta (response.ok) 
+// y luego retorna la respuesta convertida a JSON: response.json().
 
-// Convierte la respuesta de texto (JSON) a un objeto JavaScript con JSON.parse(this.responseText).
+// Encadena un segundo .then() que recibirá la data ya parseada. Pasa esta data a la misma función que 
+// usaste en la Parte 1 para renderizar los usuarios.
 
-// Llama a una función (que crearás) para renderizar los usuarios en el HTML.
+// Encadena un .catch() al final para capturar cualquier error de red e imprimirlo en la consola.
 
-// Define qué hacer en caso de error con el evento onerror.
+cargar_fetch_btn.addEventListener("click", () => {
+    fetch(url_birds)
+    .then( response => {
+      // Verificar respuesta correcta
+      if (!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      // Convertir respuesta a json
+      return response.json();
+    })
+    .then(data => {
+      // Mostrar la data obtenida
+      div_resultado.innerHTML = ""
 
-// Envía la solicitud con xhr.send().
+      console.log(data);
+      data.forEach(bird => {
+        console.log(`Obteniendo info desde url : ${url_birds}/${bird.uid}`)
+        obtenerinfo(`${url_birds}/${bird.uid}`).then( info =>{
+          if (!info.didyouknow){
+            div_resultado.innerHTML +=
+            `<div class="card" style="width: 18rem;">
+              <img src="${bird.images.main}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${bird.name.spanish}</h5>
+                <p class="card-text"> "Su nombre ya lo dice todo, que quieres saber?"</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>`
+            
+          }else {
+            div_resultado.innerHTML +=
+            `<div class="card" style="width: 18rem;">
+              <img src="${bird.images.main}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${bird.name.spanish}</h5>
+                <p class="card-text">${ info.didyouknow == "" ? "Su nombre ya lo dice todo, que quieres saber?" :  info.didyouknow}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>`
+          }
+          
+        
+        }
+        )  
+      });
+    }).catch(
+      console.error(error)
+    )
+})
 
+async function obtenerinfo(url) {
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    // Verifica que exista antes de usar
+    if (data && data.didyouknow) {
+      console.log(data.didyouknow);
+    } else {
+      console.warn("No hay datos de 'didyouknow' para este pájaro");
+    }
+    
+    return data;
+    
+  } catch (error) {
+    console.error(`Error al obtener info de ${url}:`, error.message);
+    return null; // Devuelve null en lugar de romper
+  }
+}
 
-
-
-
-
-
-
-// const xhr = new XMLHttpRequest();
-// xhr.addEventListener('load', () => {
-//     // Verificamos si el código de estado HTTP es exitoso (200-299).
-//     if (xhr.status >= 200 && xhr.status < 300) {
-//         // xhr.responseText contiene la respuesta como una cadena de texto JSON.
-//         const datos = JSON.parse(xhr.responseText);
-//         console.log("Datos recibidos con XHR:", datos[0].title);
-//     } else {
-//         console.error(`Error en la petición XHR: ${xhr.status} - ${xhr.statusText}`);
-//     }
-// });
