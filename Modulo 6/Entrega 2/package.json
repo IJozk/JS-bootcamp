@@ -1,0 +1,19 @@
+{
+  "name": "clase-1",
+  "version": "1.0.0",
+  "description": "Proyecto node Modulo 6 Entrega 2",
+  "license": "MIT",
+  "author": "IJozk",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
