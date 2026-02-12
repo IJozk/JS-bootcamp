@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head titulo=this.titulo}}
+<body>
+
+    {{> header titulo=this.titulo}}
+
+    <div class="container">
+        <div class="row">
+            {{#each aves}}
+                <div class="col-md-4 mb-4">
+                    {{> card nombre=this.nombre descripcion=this.descripcion url_img=this.url_img}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    
+    
+    {{> footer}}
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
