@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require('path');
 const hbs = require("hbs");
+const authorization = require("../middlewares/authorization");
+
+const helpers = require("../helpers/handlebars")
 
 const app = express();
 
@@ -28,10 +31,8 @@ app.set('view engine', 'hbs');
 
 app.set('views', path.join(__dirname, '../views'));
 
-
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules/bootstrap/dist')))
-
 
 hbs.registerPartials(path.join(__dirname, '../views/partials'), (err) => {
     if (err) {
@@ -41,16 +42,13 @@ hbs.registerPartials(path.join(__dirname, '../views/partials'), (err) => {
     }
 });
 
-hbs.registerHelper('truncate', (text, length) => {
-    if (text.length <= length) return text;
-    return text.substring(0, length) + '...';
-});
+hbs.registerHelper('truncate', helpers.truncatetext);
 
 hbs.registerHelper('ifEquals', function (a, b, options) {
     return a === b ? options.fn(this) : options.inverse(this);
 });
 
-app.get('/', (req, res) => {
+app.get('/', authorization, (req, res) => {
     res.render('inicio', {titulo:"Inicio", aves, ruta: "/"});
 });
 
