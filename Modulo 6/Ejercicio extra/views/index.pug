@@ -1,0 +1,13 @@
+extends layout
+block content
+  .container.py-5.text-center
+    h1.display-4 Equipo de trabajo
+    .container
+      .row.g-4
+        each usuario in usuarios
+          .col-md-4
+            .card.h-100
+              img.card-img-top(src="https://via.placeholder.com/286x180", alt="Imagen card")
+              .card-body
+                h5.card-title #{usuario.nombre}
+                p.card-text #{usuario.puesto}
