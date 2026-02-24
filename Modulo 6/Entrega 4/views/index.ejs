@@ -1,0 +1,43 @@
+<%- include('./partials/head'); %>
+<%- include('./partials/header'); %>
+    <h1 class="text-center">Mensajes</h1>
+
+    <div class="container">
+        <h2>Chat</h2>
+        <ul class="list-group mb-4">
+            <% mensajes.forEach(function(item, index) { %>
+                <li class="list-group-item">
+                    <form action="/mensaje/<%= index %>" method="post" class="d-inline">
+                        <strong><%= item.nombre %>:</strong>
+                        <input type="text" name="mensaje" value="<%= item.mensaje %>" class="form-control d-inline-block w-50" required>
+                        <button type="submit" class="btn btn-sm btn-primary">Modificar</button>
+                    </form>
+
+                    <form action="/eliminar-mensaje/<%= index %>" method="post" class="d-inline ms-2">
+                        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <div class="continer">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <form action="/enviar-mensaje" method="post">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<%- include('./partials/footer'); %>
