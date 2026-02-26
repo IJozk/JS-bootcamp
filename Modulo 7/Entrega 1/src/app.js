@@ -6,7 +6,9 @@ const app = express();
 app.get('/', async (req, res) => {
   try {
     const result = await pool.query('SELECT NOW()');
-    res.json({ message: 'Conexión exitosa', time: result.rows[0] });
+    const timeTest = String(result.rows[0].now)
+    console.log(String(timeTest))
+    res.json({ message: 'Conexión exitosa', time: timeTest });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
