@@ -31,5 +31,3 @@ const argv = yargs(hideBin(process.argv))
             }
 
     }).argv;
-
-    
