@@ -1,6 +1,11 @@
 const express = require('express');
 const pool = require('../config/db'); // Importar la configuración de db.js
+
 const app = express();
+
+// Middleware para 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Funcion async para obtener usuarios
 const obtenerUsuarios = async () =>{
@@ -32,12 +37,25 @@ const buscarUsuarioXEmail = async (email) =>{
   }
 }
 
+const crearUsuario = async ( nombre, email) =>{
+  try {
+    const sql = 'INSERT INTO usuarios( nombre, email) VALUES ( $1, $2);'
+    const valores = [ nombre, email];
+    const result = await pool.query(sql, valores);
 
-// Ruta para probar la conexión
+    console.log(result.rowCount)
+    return result.rowCount
+  }catch (e){
+    console.error("Error en la obstencion de  usaurios: ",e)
+  }
+}
+
+
+// Ruta para obtener usuarios
 app.get('/usuarios', async (req, res) => {
   try {
     const usuarios = await obtenerUsuarios();
-    console.log(usuarios)
+    console.table(usuarios)
     res.json(usuarios)
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -54,6 +72,25 @@ app.get('/usuario/:email', async (req, res) => {
       console.log(usuario)
       res.json(usuario)
     }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.post('/crearUsuario', async (req, res) => {
+  const nombre = req.body.nombre || "";
+  console.log(nombre )
+  const email = req.body.email
+  console.log(email)
+  try {
+    const usuario = await crearUsuario(nombre, email);
+    console.log(usuario)
+    if(usuario == 0){
+      throw new Error("No se inserto ningun usuario")
+    }else{
+      res.send(usuario)
+    }   
+
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
