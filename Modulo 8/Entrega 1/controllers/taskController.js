@@ -90,7 +90,7 @@ const deleteTask = async(req, res) =>{
             res.status(404).send(`No se encontro la tarea con el id: ${id}`)
         }
 
-        res.status(200).location(`/api/v1/tasks`).json({ status: 'success', data: task });
+        res.status(204).send()
 
     } catch (error) {
         console.error('Error en la lectura de las tareas:', error);
